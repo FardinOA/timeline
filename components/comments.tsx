@@ -1,9 +1,9 @@
 import type { Comment } from "@/types";
 import { Card, CardContent, CardHeader } from "./ui/card";
 
-const Comments = ({ postId, data }: { postId: number; data: any }) => {
-    const comments = data?.filter((el: any) => el.postId === postId);
-    console.log(comments);
+const Comments = ({ postId, data }: { postId: number; data: Comment[] }) => {
+    const comments = data?.filter((el: Comment) => el.postId === postId);
+
     return (
         <div className="border-t pt-4 space-y-2 h-[500px] overflow-y-auto divide-y  ">
             {comments?.map((comment: Comment) => (

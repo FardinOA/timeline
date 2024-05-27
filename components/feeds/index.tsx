@@ -1,3 +1,4 @@
+import { Post } from "@/types";
 import FeedContainer from "./feed-container";
 
 const getPosts = async () => {
@@ -37,7 +38,7 @@ const Feeds = async () => {
     const comments = await getComments();
     const users = await getUserInfo();
     // sort posts descending order by post id
-    const posts = [...data].sort((a, b) => b.id - a.id);
+    const posts: Post[] = [...data].sort((a, b) => b.id - a.id);
 
     return (
         <div className=" py-6  min-h-dvh">

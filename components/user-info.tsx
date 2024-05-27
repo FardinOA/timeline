@@ -1,7 +1,8 @@
-import type { UserInfo } from "@/types";
+import type { User, UserInfo } from "@/types";
 
 const UserInfo = ({ id, data }: UserInfo) => {
-    const user = data?.find((el: any) => el.id == id);
+    // console.log(data);
+    const user = data?.find((el: User) => el.id == id);
     // console.log(user);
 
     return (

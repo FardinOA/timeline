@@ -1,6 +1,37 @@
+export interface User {
+    id: number;
+    name: string;
+    username: string;
+    email: string;
+    address: {
+        street: string;
+        suite: string;
+        city: string;
+        zipcode: string;
+        geo: {
+            lat: string;
+            lng: string;
+        };
+    };
+    phone: string;
+    website: string;
+    company: {
+        name: string;
+        catchPhrase: string;
+        bs: string;
+    };
+}
+
+export interface Post {
+    userId: number;
+    id: number;
+    title: string;
+    body: string;
+}
+
 export interface UserInfo {
     id: number;
-    data: any;
+    data: User[];
 }
 
 export interface Comment {
@@ -10,3 +41,5 @@ export interface Comment {
     email: string;
     body: string;
 }
+
+export type CommentsType = [Comment];
