@@ -1,20 +1,11 @@
 import type { Comment } from "@/types";
 import { Card, CardContent, CardHeader } from "./ui/card";
 
-const getComments = async () => {
-    const res = await fetch(`https://jsonplaceholder.typicode.com/comments`);
-    if (!res.ok) {
-        //  handle error
-        throw new Error("Failed to fetch data");
-    }
-    return res.json();
-};
-const Comments = async ({ postId }: { postId: number }) => {
-    const data = await getComments();
+const Comments = ({ postId, data }: { postId: number; data: any }) => {
     const comments = data?.filter((el: any) => el.postId === postId);
     console.log(comments);
     return (
-        <div className="border-t pt-4 space-y-2 h-full overflow-y-auto divide-y  ">
+        <div className="border-t pt-4 space-y-2 h-[500px] overflow-y-auto divide-y  ">
             {comments?.map((comment: Comment) => (
                 <Card
                     className="  shadow-none py-2 border-0 space-y-2  "

@@ -1,5 +1,6 @@
 export interface UserInfo {
     id: number;
+    data: any;
 }
 
 export interface Comment {

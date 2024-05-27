@@ -1,18 +1,6 @@
 import type { UserInfo } from "@/types";
 
-const getUserInfo = async () => {
-    const res = await fetch(`https://jsonplaceholder.typicode.com/users`);
-
-    if (!res.ok) {
-        // handle error
-        throw new Error("Failed to fetch data");
-    }
-
-    return res.json();
-};
-
-const UserInfo = async ({ id }: UserInfo) => {
-    const data = await getUserInfo();
+const UserInfo = ({ id, data }: UserInfo) => {
     const user = data?.find((el: any) => el.id == id);
     // console.log(user);
 
