@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Forum Website Frontend
 
-## Getting Started
+This project is a React-based frontend for a microservice backend forum website. It allows users to view a timeline of posts, where each post displays the user's name, post title, and post body. Users can also expand each post to view the relevant comments.
 
-First, run the development server:
+## Features
+
+-   View a timeline of posts sorted in descending order of post ID.
+-   Each post displays the user's name, post title, and post body.
+-   Expand each post to view the relevant comments.
+
+## Technologies Used
+
+-   Next JS: A JavaScript framework for building user interfaces on top of React JS.
+-   Tailwind CSS: A utility-first CSS framework for styling the UI.
+-   ShadCn UI: A tailwindCSS component library
+
+## Run Locally
+
+Clone the project
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  git clone https://github.com/FardinOA/timeline.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Go to the project directory
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+  cd timeline
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Install dependencies
 
-## Learn More
+```bash
+  npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+Start the server
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+  npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Note:
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+I tried to implement react-window. But I can't handle the dynamic height with react-window and my post card when I expand the card. I will come up with a solution to fix this issue. Then I will implement it.
